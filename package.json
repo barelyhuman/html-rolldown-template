@@ -1,0 +1,35 @@
+{
+  "name": "html-rolldown-template",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm build; concurrently 'pnpm:dev:*'",
+    "dev:serve": "live-server --port=3000 --no-browser ./dist",
+    "dev:bundle": "rolldown -c -w",
+    "build": "rolldown -c",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@barelyhuman/prettier-config": "^2.0.2",
+    "@biomejs/biome": "^1.9.4",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@web/rollup-plugin-html": "^2.3.0",
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "node-html-parser": "^7.0.1",
+    "prettier": "^3.4.2",
+    "rolldown": "1.0.0-beta.1",
+    "sucrase": "^3.35.0",
+    "tiny-glob": "^0.2.9"
+  },
+  "dependencies": {
+    "preact": "^10.25.4"
+  },
+  "prettier": "@barelyhuman/prettier-config"
+}
